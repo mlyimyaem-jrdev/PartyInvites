@@ -1,0 +1,52 @@
+﻿@model PartyInvites.Models.GuestResponse
+
+        @* <form asp-action="RsvpForm" method="post">
+            <div>
+                <label asp-for="Name">Your Name: </label>
+                <input asp-for="Name" />
+            </div>
+            <div>
+                <label asp-for="Email">Your Email: </label>
+                <input asp-for="Email" />
+            </div>
+            <div>
+                <label asp-for="Phone">Your Phone: </label>
+                <input asp-for="Phone" />
+            </div>
+            <div>
+                <label asp-for="WillAttend">Will you attend? </label>
+                <select asp-for="WillAttend">
+                    <option value="">Choose an option</option>
+                    <option value="true">Yes, I'll be there</option>
+                    <option value="false">No, I can't come</option>
+                </select>
+            </div>
+            <button type="submit">Submit RSVP</button>
+        </form> *@
+
+
+<div class="card p-3"  style="width: 18rem;">
+    <img src="https://marketplace.canva.com/EAFalfal7vE/1/0/1600w/canva-cream-minimalist-elegant-wedding-rsvp-postcard-STkukBXyzM0.jpg" class="card-img-top" alt="...">
+    <form asp-action="RsvpForm" method="post">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Your Name:</label>
+            <input asp-for="Name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Your Email:</label>
+            <input asp-for="Email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Phone" class="form-label">Your Phone Number:</label>
+            <input asp-for="Phone" class="form-control">
+        </div>
+        <div class="mb-3">
+            <select asp-for="WillAttend" class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="true">Yes, I'll be there</option>
+                <option value="false">No, I can't come</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
